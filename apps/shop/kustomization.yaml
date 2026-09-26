@@ -4,7 +4,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 namespace: shop
 resources:
-  - namespace.yaml
+  
   - api.yaml
   - web.yaml
 
@@ -12,7 +12,7 @@ resources:
   # Розкоментуйте рядок нижче, закомітьте — і за кілька хвилин у вас буде NLB.
   # НАПРИКІНЦІ ЗАНЯТТЯ закоментуйте його знову: NLB тарифікується погодинно
   # незалежно від того, чи є вузли.
-    - web-public.yaml
+  - web-public.yaml
 
   # --- Заняття 10, практика 2: секрети з AWS ------------------------------
   # Розкоментуйте обидва рядки разом: ExternalSecret без SecretStore не працює.
