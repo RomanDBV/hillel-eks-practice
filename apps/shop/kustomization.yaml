@@ -17,5 +17,5 @@ resources:
 
   # --- Заняття 10, практика 2: секрети з AWS ------------------------------
   # Розкоментуйте обидва рядки разом: ExternalSecret без SecretStore не працює.
-  # - secret-store.yaml
-  # - external-secret.yaml
+  - secret-store.yaml
+  - external-secret.yaml
