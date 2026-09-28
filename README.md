@@ -15,6 +15,7 @@ cluster/          Уся конфігурація Terraform: один воркс
 lessons/          Файли, які ви копіюєте в cluster/ по мірі просування курсу.
 apps/shop/        Маніфести застосунку, які Flux розгортає в кластер.
 infrastructure/   Компоненти кластера, які ставить Flux (з заняття 10).
+charts/shop/      Власний Helm-чарт застосунку (з заняття 11).
 docs/             Покрокові інструкції занять.
 ```
 
@@ -141,6 +142,18 @@ terraform apply
 
 Далі — практики з `docs/lesson-10.md`: NLB через AWS Load Balancer Controller
 і секрети з Parameter Store через External Secrets Operator.
+
+### 7. Стан і власний чарт (заняття 11)
+
+Terraform не змінюється. Клас сховища `gp3` приходить через Flux з
+`infrastructure/`, база вмикається рядком `- postgres.yaml` у
+`apps/shop/kustomization.yaml`, чарт ставиться вручну:
+
+```bash
+helm install shop-chart charts/shop -n shop-chart --create-namespace
+```
+
+Деталі — `docs/lesson-11.md`.
 
 ---
 
