@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: shop
 resources:
   - namespace.yaml
-  
+
   - api.yaml
   - web.yaml
 
@@ -17,5 +17,10 @@ resources:
 
   # --- Заняття 10, практика 2: секрети з AWS ------------------------------
   # Розкоментуйте обидва рядки разом: ExternalSecret без SecretStore не працює.
-  - secret-store.yaml
-  - external-secret.yaml
+  # - secret-store.yaml
+  # - external-secret.yaml
+
+  # --- Заняття 11, практика 1: база даних ----------------------------------
+  # Потребує рядків практики 2 заняття 10: пароль бази приходить із Secret,
+  # який створює ExternalSecret.
+  # - postgres.yaml
