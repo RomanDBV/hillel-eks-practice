@@ -21,3 +21,5 @@ RUN printf 'version: %s\ncommit: %s\n' "$VERSION" "$COMMIT" \
 LABEL org.opencontainers.image.version="$VERSION" \
       org.opencontainers.image.revision="$COMMIT" \
       org.opencontainers.image.title="shop"
+
+# CI/CD test
